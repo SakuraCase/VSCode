@@ -1,6 +1,11 @@
 {
+	"window.zoomLevel": 1.2,
+    "editor.minimap.enabled": false,
+	"workbench.editor.enablePreview": false,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 
+    "vim.leader": " ",
+    "vim.disableAnnoyingNeovimMessage": true,
     "vim.otherModesKeyBindingsNonRecursive": [
         //sのマッピング削除
         {
@@ -69,7 +74,5 @@
                 }
             ]
         }
-    ],
-    "vim.leader": " ",
-    "vim.disableAnnoyingNeovimMessage": true
+    ]
 }
