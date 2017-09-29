@@ -1,0 +1,75 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+    "vim.otherModesKeyBindingsNonRecursive": [
+        //sのマッピング削除
+        {
+            "before": ["s"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "s"
+                }
+            ]
+        },
+        // 移動系
+        {
+            "before": ["<C-j>"],
+            "after": ["<C-f>"]
+        },
+        {
+            "before": ["<C-k>"],
+            "after": ["<C-b>"]
+        },
+        // マーク移動
+        {
+            "before": ["s", "a"],
+            "after": ["`", "a"]
+        },
+        // ファイルを開く
+        {
+            "before": ["<leader>", "f"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.quickOpen",
+                    "args": []
+                }
+            ]
+        },
+        // エクスプローラーを開く
+        {
+            "before": ["<leader>", "e"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.view.explorer",
+                    "args": []
+                }
+            ]
+        },
+        // 検索を開く
+        {
+            "before": ["<leader>", "g"],
+            "after": [],
+            "commands": [
+                {
+                "command": "workbench.view.search",
+                    "args": []
+                }
+            ]
+        },
+        // 補完
+        {
+            "before": ["<C-n>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.triggerSuggest"
+                }
+            ]
+        }
+    ],
+    "vim.leader": " ",
+    "vim.disableAnnoyingNeovimMessage": true
+}
