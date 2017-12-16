@@ -1,23 +1,15 @@
 {
-    "window.zoomLevel": 1.2,
+    "window.zoomLevel": 1.25,
     "editor.minimap.enabled": false,
     "workbench.editor.enablePreview": false,
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "window.menuBarVisibility": "toggle",
 
     "vim.leader": " ",
-    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.easymotion": true,
+    "vim.easymotionKeys": "sdfghjklwertui",
     "vim.otherModesKeyBindingsNonRecursive": [
-        //sのマッピング削除
-        {
-            "before": ["s"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "s"
-                }
-            ]
-        },
-        // 移動系
+        // 1ページ上下
         {
             "before": ["<C-j>"],
             "after": ["<C-f>"]
@@ -26,10 +18,15 @@
             "before": ["<C-k>"],
             "after": ["<C-b>"]
         },
-        // マーク移動
+        // カーソル行を一番上にして再描画
         {
-            "before": ["s", "a"],
-            "after": ["`", "a"]
+            "before": ["<C-h>"],
+            "after": ["z", "t"]
+        },
+        // カーソル行を中心にして再描画
+        {
+            "before": ["<CR>"],
+            "after": ["z", "z"]
         },
         // ファイルを開く
         {
@@ -64,15 +61,34 @@
                 }
             ]
         },
-        // 補完
+        // easy-motion
         {
-            "before": ["<C-n>"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.triggerSuggest"
+            "before": ["s"],
+            "after": ["<leader>", "<leader>", "2", "s"],
+        },
+    ],
+
+    // color
+    "workbench.colorTheme": "JetJet",
+    "workbench.colorCustomizations":{
+        "activityBar.background": "#0E2E85",
+        "activityBarBadge.background": "#FFD600",
+        "activityBarBadge.foreground": "#1E2223",
+        "tab.activeBackground": "#1E2223",
+        "statusBar.background": "#1E2223",
+        "sideBar.background": "#1E2223",
+        "editor.background": "#1E2223",
+    },
+    // commentの色を変更
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "Comment",
+                "scope": "comment",
+                "settings":{
+                    "foreground": "#696F7F",
                 }
-            ]
-        }
-    ]
+            }
+        ]
+    },
 }

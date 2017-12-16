@@ -1,14 +1,35 @@
-// 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
-    {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpenNavigatePrevious",
-        "when": "inQuickOpen"
-    },
+    // マッピング削除
     {
         "key": "ctrl+n",
         "command": "-workbench.action.files.newUntitledFile"
     },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-extension.vim_ctrl+h",
+    },
+
+    // remap用にwhen修正
+    {
+        "key": "ctrl+h",
+        "command": "extension.vim_ctrl+h",
+        "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl",
+    },
+
+    // マッピング追加
     {
         "key": "ctrl+n",
         "command": "workbench.action.quickOpenNavigateNext",
@@ -16,7 +37,7 @@
     },
     {
         "key": "ctrl+p",
-        "command": "-workbench.action.quickOpenNavigateNext",
+        "command": "workbench.action.quickOpenNavigatePrevious",
         "when": "inQuickOpen"
-    }
+    },
 ]
