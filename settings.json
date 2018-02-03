@@ -2,8 +2,12 @@
     "window.zoomLevel": 1.25,
     "editor.minimap.enabled": false,
     "workbench.editor.enablePreview": false,
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
     "window.menuBarVisibility": "toggle",
+
+    // https://qiita.com/xerespm/items/ed4d659cfac4a1695f4b
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    // "terminal.integrated.shell.windows": "C:\\Users\\username\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu.exe",
+    // "git.path": "C:\\wslgit.exe",
 
     "vim.leader": " ",
     "vim.easymotion": true,
