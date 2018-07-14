@@ -9,9 +9,9 @@
     // "terminal.integrated.shell.windows": "C:\\Users\\username\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu.exe",
     // "git.path": "C:\\wslgit.exe",
 
+    "vim.surround": true,
+
     "vim.leader": " ",
-    "vim.easymotion": true,
-    "vim.easymotionKeys": "sdfghjklwertui",
     "vim.normalModeKeyBindingsNonRecursive": [
         // 1ページ上下
         {
@@ -64,11 +64,6 @@
                     "args": []
                 }
             ]
-        },
-        // easy-motion
-        {
-            "before": ["s"],
-            "after": ["<leader>", "<leader>", "2", "s"],
         },
     ],
 
