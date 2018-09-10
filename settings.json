@@ -10,7 +10,7 @@
     // "git.path": "C:\\wslgit.exe",
 
     "vim.surround": true,
-
+    "vim.sneak": true,
     "vim.leader": " ",
     "vim.normalModeKeyBindingsNonRecursive": [
         // 1ページ上下
@@ -21,11 +21,6 @@
         {
             "before": ["<C-k>"],
             "after": ["<C-b>"]
-        },
-        // カーソル行を一番上にして再描画
-        {
-            "before": ["<C-h>"],
-            "after": ["z", "t"]
         },
         // カーソル行を中心にして再描画
         {
@@ -65,6 +60,39 @@
                 }
             ]
         },
+        // yank history
+        {
+            "before": ["<leader>", "y"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "multiclip.list",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["y"],
+            "after": ["y"],
+            "commands": [
+                {
+                    "command": "multiclip.copy",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["y"],
+            "after": ["y"],
+            "commands": [
+                {
+                    "command": "multiclip.copy",
+                    "args": []
+                }
+            ]
+        }
     ],
 
     // color
